@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      
+      To-Do App
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="toggleCompletedTasksList()">
+            <i class="fas fa-tasks"></i> 
+          </a>
+          <div class="completed-tasks" id="completedTasksList">
+            <h4 onclick="toggleCompletedTasksList()">Completed Tasks <i class="fas fa-times cancel-icon"></i></h4>
+            <div class="completed-tasks-container" id="completedTasks">
+              <!-- Completed tasks will be shown here -->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="task-list">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" id="taskInput" class="form-control" placeholder="Enter Task" />
+              <input type="date" id="dateInput" class="form-control" />
+              <input type="time" id="timeInput" class="form-control" />
+            </div>
+            <button onclick="addTask()" class="btn btn-primary mt-2">Add Task</button>
+          </div>
+          <hr>
+          <ul class="list-group" id="taskList">
+            <!-- Tasks will be added dynamically here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
